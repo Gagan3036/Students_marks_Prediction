@@ -1,0 +1,54 @@
+/* Background Animation */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #ffecd9);
+    background-size: 300% 300%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* Form Input Animations */
+input[type="number"]:focus {
+    outline: none;
+    border-color: #66afe9;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgba(102, 175, 233, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button Animation */
+button[type="submit"] {
+    transition: transform 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    transform: scale(1.1);
+}
+
+/* Content Animation */
+.prediction {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
