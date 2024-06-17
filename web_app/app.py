@@ -5,7 +5,7 @@ import numpy as np
 app = Flask(__name__)
 
 # Load the new trained model
-loaded_model = jl.load('students_marks_prediction_model.pkl')
+loaded_model = jl.load(r'C:\Users\gagan\Documents\GitHub\Students_marks_Prediction\web_app\students_marks_prediction_model.pkl')
 
 @app.route('/')
 def home():
@@ -32,7 +32,7 @@ def predict():
     # Round the prediction to two decimal places
     prediction = round(prediction[0], 2)
 
-    return render_template('index.html', prediction_text=f'Predicted Midterm Marks: {prediction}')
+    return render_template('index.html', prediction_text=f'Predicted Final Percentage: {prediction}')
 
 if __name__ == '__main__':
     app.run(debug=True)
