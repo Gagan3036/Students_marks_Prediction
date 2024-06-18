@@ -3,7 +3,7 @@ import joblib as jl
 import numpy as np
 
 # Load the new trained model
-loaded_model = jl.load(r'C:\Users\gagan\Documents\GitHub\Students_marks_Prediction\web_app\students_marks_prediction_model.pkl')
+loaded_model = jl.load('streamlit/students_marks_prediction_model.pkl')
 
 # Custom CSS for styling
 st.markdown("""
